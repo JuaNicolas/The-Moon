@@ -1,6 +1,3 @@
-import Glide from "./glide.modular.esm"
-
-new Glide('.glide').mount()
 
 const navSlide = () => {
     const moon = document.querySelector('.moon')
