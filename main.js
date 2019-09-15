@@ -22,7 +22,7 @@ navSlide()
 
 // window.onscroll = scrollFunction;
 
-window.addEventListener('scroll', function (e) {
+window.addEventListener('scroll', function () {
     const moon = document.querySelector('.moon')
     const nav = document.querySelector('.nav-links')
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 50) {
