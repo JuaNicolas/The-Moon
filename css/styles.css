@@ -1,0 +1,226 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat";
+  color: #161616;
+  background-color: #ffffea;
+  overflow-x: hidden;
+}
+
+a {
+  color: #161616;
+  text-decoration: none;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+.title {
+  font-size: 1.5em;
+  text-align: center;
+  padding: 2em 0 1.5em;
+}
+
+nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 10vh;
+}
+
+nav .logo {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 500;
+}
+
+nav .moon {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+
+nav .nav-links {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 74px;
+  right: 0;
+  background: rgba(255, 255, 234, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  width: 50%;
+  height: 100vh;
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
+  -webkit-transition: -webkit-transform 0.8s ease-in 0.1s;
+  transition: -webkit-transform 0.8s ease-in 0.1s;
+  transition: transform 0.8s ease-in 0.1s;
+  transition: transform 0.8s ease-in 0.1s, -webkit-transform 0.8s ease-in 0.1s;
+}
+
+nav .nav-links li {
+  width: 100%;
+  padding: 1em;
+  text-transform: uppercase;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .nav-links li:hover {
+  background: rgba(255, 255, 234, 0.9);
+  font-weight: 600;
+}
+
+nav .nav-active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+#hero {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  background: #fafad5;
+  text-align: center;
+}
+
+#hero img {
+  margin: 20px 0;
+}
+
+#hero p {
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+#phases {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff2a6;
+  margin-bottom: 100px;
+}
+
+#phases ol {
+  padding: 1em;
+  list-style-type: none;
+}
+
+#phases ol li {
+  margin: 20px 0;
+}
+
+#phases ol li h3 {
+  font-size: 1.4em;
+  margin: 3em 0 1.5em;
+  text-align: center;
+}
+
+#phases ol li p {
+  line-height: 2em;
+}
+
+#eclipse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffdbd4;
+}
+
+#eclipse .container p {
+  padding: 2em 1em;
+  line-height: 2em;
+}
+
+#galery img {
+  height: 500px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+#culture {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f8f9fc;
+}
+
+#culture .container {
+  padding: 1em;
+}
+
+#culture .container p {
+  padding: 1.5em 1em;
+  line-height: 1.5em;
+}
+
+footer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer p {
+  text-align: center;
+  font-size: .9em;
+  padding: 0 2em 2em;
+}
+/*# sourceMappingURL=styles.css.map */
