@@ -10,8 +10,6 @@ const navSlide = () => {
 
 }
 
-navSlide()
-
 // function scrollFunction() {
 //     const moon = document.querySelector('.moon')
 //     const nav = document.querySelector('.nav-links')
@@ -36,4 +34,9 @@ window.addEventListener('scroll', function () {
         moon.style.position = 'initial'
 
     }
-});
+})
+
+window.onload = function () {
+
+    navSlide()
+}
