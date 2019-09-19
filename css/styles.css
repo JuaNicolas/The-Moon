@@ -182,6 +182,7 @@ nav .nav-active {
 #galery {
   background: #f6efff;
   text-align: center;
+  padding: 0 2rem 1rem;
 }
 
 #galery h2 {
