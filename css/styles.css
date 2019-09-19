@@ -9,6 +9,7 @@ body {
   color: #161616;
   background-color: #ffffea;
   overflow-x: hidden;
+  line-height: 2rem;
 }
 
 a {
@@ -17,8 +18,18 @@ a {
 }
 
 main {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 img {
@@ -26,17 +37,29 @@ img {
 }
 
 section {
-  margin-bottom: 100px;
+  margin: 50px 0;
 }
 
 .title {
-  font-size: 1.5em;
+  padding: 1rem 0;
+}
+
+.title h2 {
   text-align: center;
-  padding: 2em 0 1.5em;
+  margin: 2rem 0 3rem;
+}
+
+.title img {
+  width: 100%;
+}
+
+.container {
+  padding: 1rem 1.5rem;
 }
 
 nav {
-  width: 100%;
+  height: 10vh;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,13 +68,12 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 10vh;
 }
 
 nav .logo {
   letter-spacing: 5px;
   text-transform: uppercase;
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: 500;
 }
 
@@ -59,53 +81,42 @@ nav .moon {
   width: 64px;
   height: 64px;
   cursor: pointer;
+  z-index: 9;
 }
 
 nav .nav-links {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 74px;
+  position: fixed;
+  top: 0;
   right: 0;
-  background: rgba(255, 255, 234, 0.8);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  width: 50%;
   height: 100vh;
-  -webkit-transform: translateX(110%);
-          transform: translateX(110%);
-  -webkit-transition: -webkit-transform 0.8s ease-in 0.1s;
-  transition: -webkit-transform 0.8s ease-in 0.1s;
-  transition: transform 0.8s ease-in 0.1s;
-  transition: transform 0.8s ease-in 0.1s, -webkit-transform 0.8s ease-in 0.1s;
+  width: 40vw;
+  background: rgba(255, 255, 234, 0.8);
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.6s ease-in 0.1s;
+  transition: -webkit-transform 0.6s ease-in 0.1s;
+  transition: transform 0.6s ease-in 0.1s;
+  transition: transform 0.6s ease-in 0.1s, -webkit-transform 0.6s ease-in 0.1s;
+  text-align: center;
+  list-style-type: none;
 }
 
 nav .nav-links li {
-  width: 100%;
-  padding: 1em;
-  text-transform: uppercase;
-  height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+
+nav .nav-links li:first-child {
+  margin-top: 64px;
 }
 
 nav .nav-links li:hover {
   background: rgba(255, 255, 234, 0.9);
+  border: solid #a1a1a1;
+  border-left: none;
+  border-right: none;
   font-weight: 600;
+  font-size: 1.1rem;
 }
 
 nav .nav-active {
@@ -114,113 +125,75 @@ nav .nav-active {
 }
 
 #hero {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1em;
+  padding: 0.8rem 0.5rem;
   background: #fafad5;
+  height: 90vh;
+  width: 100%;
+  background-image: url("../static/astrounaunt-moon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: -9;
+}
+
+#hero blockquote {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 1rem;
   text-align: center;
-}
-
-#hero img {
-  margin: 20px 0;
-}
-
-#hero p {
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.1rem;
+  color: #fafafa;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #phases {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background-color: #fff2a6;
-  margin-bottom: 100px;
 }
 
 #phases ol {
-  padding: 1em;
   list-style-type: none;
 }
 
 #phases ol li {
-  margin: 20px 0;
+  margin: 2rem 0 1.5rem;
 }
 
 #phases ol li h3 {
-  font-size: 1.4em;
-  margin: 3em 0 1.5em;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 
-#phases ol li p {
-  line-height: 2em;
-}
-
 #eclipse {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #ffdbd4;
 }
 
-#eclipse .container p {
-  padding: 2em 1em;
-  line-height: 2em;
-}
-
-#galery img {
-  height: 500px;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 #culture {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   background: #f8f9fc;
 }
 
-#culture .container {
-  padding: 1em;
-}
-
-#culture .container p {
-  padding: 1.5em 1em;
-  line-height: 1.5em;
+#culture hr {
+  width: 75%;
+  margin: 2rem auto;
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 footer p {
   text-align: center;
-  font-size: .9em;
-  padding: 0 2em 2em;
+  font-size: 0.9rem;
+  padding: 0 2rem 2rem;
 }
 /*# sourceMappingURL=styles.css.map */

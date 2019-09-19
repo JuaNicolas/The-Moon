@@ -11,6 +11,7 @@ body {
   color: rgb(22, 22, 22);
   background-color: #ffffea;
   overflow-x: hidden;
+  line-height: 2rem;
 }
 
 a {
@@ -19,8 +20,11 @@ a {
 }
 
 main {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 img {
@@ -28,42 +32,44 @@ img {
 }
 
 section {
-  margin-bottom: 100px;
+  margin: 50px 0;
 }
 
 .title {
-  font-size: 1.5em;
-  text-align: center;
-  padding: 2em 0 1.5em;
+  padding: 1rem 0;
+  h2 {
+    text-align: center;
+    margin: 2rem 0 3rem;
+  }
+  img {
+    width: 100%;
+  }
 }
 
-@mixin center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.container {
+  padding: 1rem 1.5rem;
 }
 
-@mixin center-mobile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+$mobile: 320px;
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1440px;
 
 // -------------------------------------------------------------------------------------------------
 
 // Navigator
 
 nav {
-  width: 100%;
+  height: 10vh;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  min-height: 10vh;
 
   .logo {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-size: 3em;
+    font-size: 3rem;
     font-weight: 500;
   }
 
@@ -71,33 +77,35 @@ nav {
     width: 64px;
     height: 64px;
     cursor: pointer;
+    z-index: 9;
   }
 
   .nav-links {
-    @include center-mobile;
-    position: absolute;
-    top: 74px;
+    position: fixed;
+    top: 0;
     right: 0;
-    background: rgba(255, 255, 234, 0.8);
-    display: flex;
-
-    list-style: none;
-    width: 50%;
     height: 100vh;
-    transform: translateX(110%);
-    transition: transform 0.8s ease-in 0.1s;
+    width: 40vw;
+    background: rgba(255, 255, 234, 0.8);
+    transform: translateX(100%);
+    transition: transform 0.6s ease-in 0.1s;
+    text-align: center;
+    list-style-type: none;
+
     li {
-      width: 100%;
-      padding: 1em;
-      text-transform: uppercase;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 1rem 0;
+      cursor: pointer;
+    }
+    li:first-child {
+      margin-top: 64px;
     }
     li:hover {
       background: rgba(255, 255, 234, 0.9);
+      border: solid #a1a1a1;
+      border-left: none;
+      border-right: none;
       font-weight: 600;
+      font-size: 1.1rem;
     }
   }
 }
@@ -109,38 +117,42 @@ nav .nav-active {
 // Hero
 
 #hero {
-  @include center-mobile;
-  padding: 1em;
+  padding: 0.8rem 0.5rem;
   background: rgb(250, 250, 213);
-  text-align: center;
-  img {
-    margin: 20px 0;
-  }
-  p {
+  height: 90vh;
+  width: 100%;
+  background-image: url("../static/astrounaunt-moon.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: -9;
+  blockquote {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 1rem;
+    text-align: center;
     font-weight: 500;
-    font-size: 1.2em;
+    font-size: 1.1rem;
+    color: #fafafa;
+    background: rgba(0, 0, 0, 0.7);
   }
 }
 
 // Phases
 
 #phases {
-  @include center-mobile;
   background-color: #fff2a6;
-  margin-bottom: 100px;
-
   ol {
-    padding: 1em;
     list-style-type: none;
     li {
-      margin: 20px 0;
+      margin: 2rem 0 1.5rem;
       h3 {
-        font-size: 1.4em;
-        margin: 3em 0 1.5em;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
         text-align: center;
-      }
-      p {
-        line-height: 2em;
       }
     }
   }
@@ -149,47 +161,27 @@ nav .nav-active {
 // Eclipse
 
 #eclipse {
-  @include center-mobile;
   background: rgb(255, 219, 212);
-  .container {
-    p {
-      padding: 2em 1em;
-      line-height: 2em;
-    }
-  }
-}
-
-// Galery
-
-#galery {
-  img {
-    height: 500px;
-    object-fit: contain;
-  }
 }
 
 // Culture
 
 #culture {
-  @include center-mobile;
   background: rgb(248, 249, 252);
-  .container {
-    padding: 1em;
-    p {
-      padding: 1.5em 1em;
-      line-height: 1.5em;
-    }
+  hr {
+    width: 75%;
+    margin: 2rem auto;
   }
 }
 
 // Footer
 
 footer {
-    @include center-mobile;
-    p {
-        text-align: center;
-        font-size: .9em;
-        padding:  0 2em 2em;
-    }
+  display: flex;
+  flex-direction: column;
+  p {
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0 2rem 2rem;
+  }
 }
-
