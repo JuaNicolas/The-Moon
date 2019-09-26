@@ -4,68 +4,78 @@
 // Navigator
 
 nav {
-  height: 10vh;
+  height: 20vh;
   width: 100vw;
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
   align-items: center;
 
   .logo {
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font-size: 3rem;
-    font-weight: 500;
+    grid-column: 2/3;
+    & a {
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-weight: 500;
+    }
   }
-
+  
   .moon {
+    grid-column: 3/4;
+    justify-self: end;
+    cursor: pointer;
     width: 64px;
     height: 64px;
-    cursor: pointer;
     z-index: 9;
   }
 
   .nav-links {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
-    width: 40vw;
-    background: rgba(255, 255, 234, 0.8);
+    width: 35vw;
+    background-color: rgba(map-get($colors, "background"), 0.7);
     transform: translateX(100%);
     transition: transform 0.6s ease-in 0.1s;
     text-align: center;
     list-style-type: none;
+    z-index: 8;
 
     li {
       padding: 1rem 0;
       cursor: pointer;
-    }
-    li:first-child {
-      margin-top: 84px;
-    }
-    li:hover {
-      background: rgba(255, 255, 217, 0.9);
-      border-left: none;
-      border-right: none;
-      font-size: 1.1rem;
+
+      &:first-child {
+        margin-top: 84px;
+      }
+      &:hover {
+        background-color: rgba(
+          darken(map-get($colors, "background"), 20%),
+          0.9
+        );
+        border-left: none;
+        border-right: none;
+        font-size: 1.1rem;
+      }
     }
   }
 }
 
 nav .nav-active {
+  display: block;
   transform: translateX(-0%);
 }
 
 // Hero
 
 #hero {
-  padding: 0.8rem 0.5rem;
-  background: rgb(250, 250, 213);
-  height: 90vh;
+  height: 65vh;
   width: 100%;
   background-image: url("../static/astrounaunt-moon.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   position: relative;
   z-index: -9;
@@ -78,15 +88,13 @@ nav .nav-active {
     text-align: center;
     font-weight: 500;
     font-size: 1.1rem;
-    color: #fafafa;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 }
 
 // Phases
 
 #phases {
-  background-color: #fff2a6;
   ol {
     list-style-type: none;
     li {
@@ -102,14 +110,9 @@ nav .nav-active {
 
 // Eclipse
 
-#eclipse {
-  background: rgb(255, 219, 212);
-}
-
 // Culture
 
 #culture {
-  background: rgb(248, 249, 252);
   hr {
     width: 75%;
     margin: 2rem auto;
@@ -119,7 +122,6 @@ nav .nav-active {
 // Galery
 
 #galery {
-  background: rgb(246, 239, 255);
   text-align: center;
   padding: 0 2rem 1rem;
   h2 {
@@ -140,7 +142,7 @@ nav .nav-active {
     #r1:checked ~ .s1 {
       margin-left: 0;
     }
-    
+
     #r2:checked ~ .s1 {
       margin-left: -25%;
     }
@@ -161,7 +163,7 @@ nav .nav-active {
         max-height: 840px;
       }
     }
-    input[name=r] {
+    input[name="r"] {
       position: absolute;
       visibility: hidden;
     }

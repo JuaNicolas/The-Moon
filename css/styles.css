@@ -6,30 +6,15 @@ body {
 
 body {
   font-family: "Montserrat";
-  color: #161616;
-  background-color: #ffffea;
+  color: #eeeeee;
+  background-color: #4d4b3d;
   overflow-x: hidden;
   line-height: 2rem;
-}
-
-a {
-  color: #161616;
-  text-decoration: none;
 }
 
 main {
   width: 90%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 img {
@@ -46,7 +31,7 @@ section {
 
 .title h2 {
   text-align: center;
-  margin: 2rem 0 3rem;
+  margin: 2rem 1rem 3rem;
 }
 
 .title img {
@@ -57,20 +42,30 @@ section {
   padding: 1rem 1.5rem;
 }
 
+a {
+  color: #fafafa;
+  text-decoration: none;
+}
+
 nav {
-  height: 10vh;
+  height: 20vh;
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 1fr 1fr 5%;
+      grid-template-columns: 5% 1fr 1fr 5%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
 nav .logo {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+nav .logo a {
   letter-spacing: 5px;
   text-transform: uppercase;
   font-size: 3rem;
@@ -78,19 +73,25 @@ nav .logo {
 }
 
 nav .moon {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  cursor: pointer;
   width: 64px;
   height: 64px;
-  cursor: pointer;
   z-index: 9;
 }
 
 nav .nav-links {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
   height: 100vh;
-  width: 40vw;
-  background: rgba(255, 255, 234, 0.8);
+  width: 35vw;
+  background-color: rgba(77, 75, 61, 0.7);
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: -webkit-transform 0.6s ease-in 0.1s;
@@ -99,6 +100,7 @@ nav .nav-links {
   transition: transform 0.6s ease-in 0.1s, -webkit-transform 0.6s ease-in 0.1s;
   text-align: center;
   list-style-type: none;
+  z-index: 8;
 }
 
 nav .nav-links li {
@@ -111,25 +113,24 @@ nav .nav-links li:first-child {
 }
 
 nav .nav-links li:hover {
-  background: rgba(255, 255, 217, 0.9);
+  background-color: rgba(20, 20, 16, 0.9);
   border-left: none;
   border-right: none;
   font-size: 1.1rem;
 }
 
 nav .nav-active {
+  display: block;
   -webkit-transform: translateX(0%);
           transform: translateX(0%);
 }
 
 #hero {
-  padding: 0.8rem 0.5rem;
-  background: #fafad5;
-  height: 90vh;
+  height: 65vh;
   width: 100%;
   background-image: url("../static/astrounaunt-moon.jpg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   position: relative;
   z-index: -9;
@@ -144,12 +145,7 @@ nav .nav-active {
   text-align: center;
   font-weight: 500;
   font-size: 1.1rem;
-  color: #fafafa;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-#phases {
-  background-color: #fff2a6;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 #phases ol {
@@ -166,21 +162,12 @@ nav .nav-active {
   text-align: center;
 }
 
-#eclipse {
-  background: #ffdbd4;
-}
-
-#culture {
-  background: #f8f9fc;
-}
-
 #culture hr {
   width: 75%;
   margin: 2rem auto;
 }
 
 #galery {
-  background: #f6efff;
   text-align: center;
   padding: 0 2rem 1rem;
 }
@@ -233,7 +220,7 @@ nav .nav-active {
   max-height: 840px;
 }
 
-.slidershow .slides input[name=r] {
+.slidershow .slides input[name="r"] {
   position: absolute;
   visibility: hidden;
 }

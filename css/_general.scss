@@ -1,3 +1,18 @@
+$colors: (
+  "links": #fafafa,
+  "light-grey": #faf5ef,
+  "medium-grey": #d7d1c9,
+  "font": #eeeeee,
+  "background": #4d4b3d,
+);
+
+$gris-plata: #8a9597;
+$gris-plata-claro: #b0b8b9;
+
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1440px;
+
 *,
 body {
   margin: 0;
@@ -6,23 +21,16 @@ body {
 
 body {
   font-family: "Montserrat";
-  color: rgb(22, 22, 22);
-  background-color: #ffffea;
+  color: map-get($colors, "font");
+  background-color: map-get($colors, "background");
   overflow-x: hidden;
   line-height: 2rem;
 }
 
-a {
-  color: rgb(22, 22, 22);
-  text-decoration: none;
-}
 
 main {
   width: 90%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 img {
@@ -37,7 +45,7 @@ section {
   padding: 1rem 0;
   h2 {
     text-align: center;
-    margin: 2rem 0 3rem;
+    margin: 2rem 1rem 3rem;
   }
   img {
     width: 100%;
@@ -48,7 +56,7 @@ section {
   padding: 1rem 1.5rem;
 }
 
-$mobile: 320px;
-$tablet: 768px;
-$laptop: 1024px;
-$desktop: 1440px;
+a {
+  color: map-get($colors, "links");
+  text-decoration: none;
+}
