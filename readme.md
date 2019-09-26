@@ -1,29 +1,21 @@
-# Foobar
+# The Moon
 
-Foobar is a Python library for dealing with word pluralization.
+The Moon es una página web creada con información sacada desde [Wikipedia](https://es.wikipedia.org/wiki/Luna) y las fotos de [Unplash](https://unsplash.com/images/nature/moon)
 
-## Installation
+## Conocimientos aplicados
 
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+* HTML5
+  - Creando la estructura de la página que consta de un header, un main content area y un footer.
+  
+* CSS3
+  - Pensado en mobile-first
+  
+* SASS
+  - Una hoja de estilos genérica y una compiladora.
 
-```bash
-pip install foobar
-```
+* Vanilla JavaScript
+  - Aplicado para detectar el movimiento del usuario y responder acorde a ello.
 
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
+## Contacto
+[Linkedin](https://www.linkedin.com/in/nicolas-agustin-juanico/)
+[Gmail](nicolas.juany@gmail.com)
