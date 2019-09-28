@@ -18,4 +18,4 @@ The Moon es una página web creada con información sacada desde [Wikipedia](htt
 
 ## Contacto
 [Linkedin](https://www.linkedin.com/in/nicolas-agustin-juanico/)
-[Gmail](nicolas.juany@gmail.com)
+nicolas.juany@gmail.com
